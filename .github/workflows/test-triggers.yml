@@ -30,23 +30,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
           
-      - name: Notify teams Linux
-        if: always()
-        run: .github/bin/notify-result-teams.sh
-        env:
-        
-          VALIDATION_PART: 'TRIGGER'
-          VALIDATION_STATUS: 'success'
-          VALIDATION_OS: '${{github.event_name}}' 
-          TEAMS_WEBHOOK: '${{ secrets.TEAMS_WEBHOOK }}'    
-
-      - name: Notify slack Linux
-        if: always()
-        run: .github/bin/notify-result-slack.sh
-        env:
-        
-          VALIDATION_PART: 'TRIGGER'
-          VALIDATION_STATUS: 'success'
-          VALIDATION_OS: '${{github.event_name}}' 
-          SLACK_WEBHOOK: '${{ secrets.SLACK_WEBHOOK }}'     
-        
+#      - name: Notify teams Linux
+#        if: always()
+#        run: .github/bin/notify-result-teams.sh
+#        env:
+#        
+#          VALIDATION_PART: 'TRIGGER'
+#          VALIDATION_STATUS: 'success'
+#          VALIDATION_OS: '${{github.event_name}}' 
+#          TEAMS_WEBHOOK: '${{ secrets.TEAMS_WEBHOOK }}'    
+#
+#      - name: Notify slack Linux
+#        if: always()
+#        run: .github/bin/notify-result-slack.sh
+#        env:
+#        
+#          VALIDATION_PART: 'TRIGGER'
+#          VALIDATION_STATUS: 'success'
+#          VALIDATION_OS: '${{github.event_name}}' 
+#          SLACK_WEBHOOK: '${{ secrets.SLACK_WEBHOOK }}'     
+      
